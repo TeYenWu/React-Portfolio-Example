@@ -1,21 +1,17 @@
 # React Portfolio Website
 This project served as the course material for FSU's CIS4930/5930 HCI class, aiming to provide a quick overview and hands-on experience in high-fidelity prototyping using React. This material was built on the [Tutorials](https://www.youtube.com/watch?v=7WwtzsSHdpI) and [Github Repo](https://github.com/safak/youtube/tree/react-portfolio) from [Lama Dev](https://www.youtube.com/@LamaDev). We change it ...
 
-# Pre-configuration
+## Pre-configuration
 
-## Install Node.js and NPM
+### Install Node.js and NPM
 Please use Node version managers to install Node.js and NPM. 
 Here's the [download link](https://nodejs.org/en/download/)
 
-## Install Packages
+### Install Packages
 npm install
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Getting Started with Create React App
 
 In the project directory, you can run:
 
