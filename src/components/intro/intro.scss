@@ -3,7 +3,6 @@
 .intro {
   background-color: white;
   display: flex;
-
   @include mobile{
     flex-direction: column;
     align-items: center;
@@ -12,13 +11,13 @@
   .left {
     flex: 0.5;
     overflow: hidden;
-
+    align-self: center;
     .imgContainer {
-      width: 700px;
-      height: 700px;
+      width: 80%;
       background-color: crimson;
       border-radius: 50%;
       display: flex;
+      
       align-items: flex-end;
       justify-content: center;
       float: right;
