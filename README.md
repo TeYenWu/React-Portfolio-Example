@@ -3,6 +3,12 @@ This project served as the course material for FSU's CIS4930/5930 HCI class, aim
 
 ## Pre-configuration
 
+### Install and Configure Visual Studio Code
+
+Download and install [Visual Studio Code](https://code.visualstudio.com)
+
+Install extensions: ES7+ React/Redux/React-Native snippets
+
 ### Install Node.js and NPM
 Please use Node version managers to install Node.js and NPM. 
 Here's the [download link](https://nodejs.org/en/download/)
