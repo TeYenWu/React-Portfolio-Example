@@ -1,5 +1,5 @@
 # React Portfolio Website
-This project served as the course material for FSU's CIS4930/5930 HCI class, aiming to provide a quick overview and hands-on experience in high-fidelity prototyping using React. This material was built on the [Tutorials](https://www.youtube.com/watch?v=7WwtzsSHdpI) and [Github Repo](https://github.com/safak/youtube/tree/react-portfolio) from [Lama Dev](https://www.youtube.com/@LamaDev). We change it ...
+This project served as the course material for FSU's CIS4930/5930 HCI class, aiming to provide a quick overview and hands-on experience in high-fidelity prototyping using React. This material was built on the [Tutorials](https://www.youtube.com/watch?v=7WwtzsSHdpI) and [Github Repo](https://github.com/safak/youtube/tree/react-portfolio) from [Lama Dev](https://www.youtube.com/@LamaDev). We have updated the content accordingly, making it align with the course structure and tailored for beginners, enabling students to swiftly start and construct a prototype for a Web App. 
 
 ## Pre-configuration
 
@@ -15,7 +15,6 @@ Here's the [download link](https://nodejs.org/en/download/)
 
 ### Install Packages
 npm install
-
 
 ## Getting Started with Create React App
 
