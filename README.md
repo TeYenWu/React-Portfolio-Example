@@ -82,3 +82,60 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## FAQ
+### Q: Facing this error: error:0308010C:digital envelope routines::unsupported
+A: If you are facing the following error try out the given solution:
+
+```
+Error: error:0308010C:digital envelope routines::unsupported
+    at new Hash (node:internal/crypto/hash:68:19)
+    at Object.createHash (node:crypto:138:10)
+...
+    at /Users/chashi/Desktop/FSU/Spring 2024/TA HCI/my-portfolio-example/node_modules/babel-loader/lib/index.js:51:103 {
+  opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ],
+  library: 'digital envelope routines',
+  reason: 'unsupported',
+  code: 'ERR_OSSL_EVP_UNSUPPORTED'
+}
+
+Node.js v20.11.1
+```
+
+Solution: 
+
+Itypically occurs with Node.js versions 17 and above due to changes in the default OpenSSL configuration. These versions default to using OpenSSL 3, which has made some algorithms that were previously default now conditional on being enabled in the OpenSSL configuration. This can lead to issues with some Node.js projects, particularly those that rely on certain cryptographic functions.
+
+One common solution to this problem is to set an environment variable that tells Node.js to use a different cryptographic policy, effectively reverting to behavior compatible with earlier versions of OpenSSL. You can try setting the NODE_OPTIONS environment variable to --openssl-legacy-provider before starting your development server. This tells Node.js to use legacy methods for cryptography, which can bypass the error you're seeing.
+
+#### For Linux or macOS
+Open your terminal and run the following command before starting your development server:
+```
+export NODE_OPTIONS=--openssl-legacy-provider
+```
+
+#### For Windows
+Open your command prompt or PowerShell and run the following command before starting your development server:
+```
+$env:NODE_OPTIONS="--openssl-legacy-provider"
+```
+
+#### Permanent Solution
+If you find yourself needing to use this workaround frequently, you can add the NODE_OPTIONS variable to your environment variables permanently:
+
+On Linux/macOS, add the export command to your .bashrc, .bash_profile, or .zshrc file.
+On Windows, you can set environment variables through the System Properties.
+
+### Q: Facing this error: React' must be in scope when using JSX  react/react-in-jsx-scope
+A: The error you're seeing indicates that React must be in scope whenever you use JSX syntax in your components. This requirement was a standard in React versions prior to React 17. With React 17 and newer, the new JSX Transform was introduced, allowing you to use JSX without importing React in every file.
+Solution: 
+#### Update React and ReactDOM: 
+Make sure your package.json file has the appropriate versions of react and react-dom (17.0.0 or higher). You can update them using npm:
+```
+npm install react@latest react-dom@latest
+```
+#### Update React Scripts: 
+If you're using Create React App, ensure you have the latest version of react-scripts that supports React 17+ JSX Transform:
+```
+npm install react-scripts@latest
+```
